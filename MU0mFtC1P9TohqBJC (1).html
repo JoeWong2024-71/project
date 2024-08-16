@@ -1,0 +1,321 @@
+ <html><head>
+  <!-- <base href="https://travel.taichung.gov.tw/zh-tw/attractions/topten%20change%20theme%20to%20tokyo">  -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tokyo's Top Ten Attractions - Interactive Tour Planner</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap');
+
+  :root {
+    --primary-color: #FF1493;
+    --secondary-color: #00CED1;
+    --text-color: #333;
+    --bg-color: #f0f0f0;
+    --button-bg: #4CAF50;
+    --button-hover: #45a049;
+  }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  header {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+    padding: 2em 0;
+    margin-bottom: 2em;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: url('https://tokyo-attractions.com/tokyo-skyline.jpg') center/cover no-repeat;
+    opacity: 0.2;
+    animation: rotate 60s linear infinite;
+  }
+
+  @keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 3.5em;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+
+  .attraction-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2em;
+  }
+
+  .attraction-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+  }
+
+  .attraction-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .attraction-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .attraction-card:hover .attraction-image {
+    transform: scale(1.1);
+  }
+
+  .attraction-info {
+    padding: 1.5em;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+  }
+
+  .attraction-name {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: var(--primary-color);
+  }
+
+  .attraction-description {
+    font-size: 1em;
+    color: var(--text-color);
+    margin-bottom: 1em;
+  }
+
+  .button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+  }
+
+  .attraction-button {
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--button-bg);
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.9em;
+  }
+
+  /* .attraction-button:hover {
+    background-color: var(--button-hover);
+  } */
+
+   /* .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+  } 
+ .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+ .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  } 
+
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  } */
+</style>
+</head>
+<body>
+  <header>
+    <h1>東京十大景點</h1>
+  </header>
+  <div class="container">
+    <div class="attraction-grid">
+      <div class="attraction-card">
+        <img src="https://tokyo-attractions.com/senso-ji.jpg" alt="View of Senso-ji Temple with pagoda and lanterns, traditional Japanese architecture" class="attraction-image" width="300" height="250">
+        <div class="attraction-info">
+          <div class="attraction-name">淺草寺</div>
+          <div class="attraction-description">東京最古老的寺廟，以巨大的紅色燈籠聞名。漫步在充滿歷史的參拜道上，感受日本傳統文化的魅力。</div>
+          <div class="button-group">
+            <button class="attraction-button tour-plan" data-attraction="淺草寺">行程規劃</button>
+            <button class="attraction-button price-list" data-attraction="淺草寺">價格列表</button>
+            <button class="attraction-button share" data-attraction="淺草寺">分享</button>
+            <button class="attraction-button enquiry" data-attraction="淺草寺">詢問</button>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat for other attractions -->
+    </div>
+  </div>
+<!-- 
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-body"></p>
+    </div>
+  </div> -->
+
+  <!-- try1 -->
+
+  <div class="container">
+    <h2>Modal Example</h2>
+    <!-- Trigger the modal with a button -->
+    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+  
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Modal Header</h4>
+          </div>
+          <div class="modal-body">
+            <p>Some text in the modal.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script>
+    // document.addEventListener('DOMContentLoaded', () => {
+    //   const modal = document.getElementById('modal');
+    //   const modalTitle = document.getElementById('modal-title');
+    //   const modalBody = document.getElementById('modal-body');
+    //   const closeBtn = document.getElementsByClassName('close')[0];
+
+  //     function openModal(title, content) {
+  //       modalTitle.textContent = title;
+  //       modalBody.textContent = content;
+  //       modal.style.display = 'block';
+  //     }
+
+  //     closeBtn.onclick = function() {
+  //       modal.style.display = 'none';
+  //     }
+
+  //     window.onclick = function(event) {
+  //       if (event.target == modal) {
+  //         modal.style.display = 'none';
+  //       }
+  //     }
+
+  //     document.querySelectorAll('.tour-plan').forEach(button => {
+  //       button.addEventListener('click', () => {
+  //         const attraction = button.getAttribute('data-attraction');
+  //         openModal(`${attraction} 行程規劃`, `這裡是 ${attraction} 的詳細行程規劃。您可以根據自己的喜好自定義行程。`);
+  //       });
+  //     });
+
+  //     document.querySelectorAll('.price-list').forEach(button => {
+  //       button.addEventListener('click', () => {
+  //         const attraction = button.getAttribute('data-attraction');
+  //         openModal(`${attraction} 價格列表`, `這裡是 ${attraction} 的門票和相關服務的價格列表。`);
+  //       });
+  //     });
+
+  //     document.querySelectorAll('.share').forEach(button => {
+  //       button.addEventListener('click', () => {
+  //         const attraction = button.getAttribute('data-attraction');
+  //         openModal(`分享 ${attraction}`, `分享 ${attraction} 的信息到社交媒體或通過電子郵件發送給朋友。`);
+  //       });
+  //     });
+
+  //     document.querySelectorAll('.enquiry').forEach(button => {
+  //       button.addEventListener('click', () => {
+  //         const attraction = button.getAttribute('data-attraction');
+  //         openModal(`關於 ${attraction} 的詢問`, `如果您有任何關於 ${attraction} 的問題，請在此處填寫您的詢問。我們的客服人員會盡快回覆您。`);
+  //       });
+  //     });
+
+  //     gsap.from(".attraction-card", {
+  //       duration: 1,
+  //       opacity: 0,
+  //       y: 50,
+  //       stagger: 0.2,
+  //       ease: "power3.out"
+  //     });
+
+  //     const cards = document.querySelectorAll('.attraction-card');
+  //     cards.forEach(card => {
+  //       card.addEventListener('mouseenter', () => {
+  //         gsap.to(card.querySelector('.attraction-info'), {
+  //           duration: 0.3,
+  //           y: -10,
+  //           ease: "power2.out"
+  //         });
+  //       });
+  //       card.addEventListener('mouseleave', () => {
+  //         gsap.to(card.querySelector('.attraction-info'), {
+  //           duration: 0.3,
+  //           y: 0,
+  //           ease: "power2.out"
+  //         });
+  //       });
+  //     });
+  //   });
+  // </script>
+</body>
+</html>

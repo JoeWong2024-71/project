@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cheer!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styleA.css">
+    <link rel="icon" type="image/jpg" href="/img1/bicycle-svgrepo-com.svg">
+    
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+  .card img{
+   height:280px;}
+
+
+   .K1{
+    font-family: "Lato", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 25px;
+    color:rgb(223, 102, 223)
+   }
+
+   .K3{font-family: "Lato", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 50px;
+    color:rgb(46, 9, 46)}
+
+   .p1 img{float:right} 
+
+   .p1{  font-family: "Playwrite HR", cursive; 
+       font-size: 20px;
+       font-weight: normal;
+       text-indent: 50px; 
+   Color:rgb(103, 103, 148);text-align: left;}
+    
+   .k5 {font-size :2.5rem;text-align: center; font-weight: 800;color:rgb(132, 42, 216);
+        background-color:inherit } 
+
+    .attraction-button {
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.9em;
+  }
+
+   .attraction-button:hover {
+    background-color: rgb(127, 206, 67);
+  } 
+  /* .attraction-button:hover {
+    background-color: var(--button-hover);
+  } */
+
+
+  .button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+  }
+ .card-body:hover {transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);}
+  
+   </style> 
+  </head>
+
+  <body>
+
+    <header style="position:sticky">
+      
+      <img src="./img1/bicycle-svgrepo-com.svg" width="80px" position="absolute" *;>
+      
+      <ul>
+      
+      <li class="dropdown">
+          <button class="dropbtn" style=" margin-top: 0px;">旅遊錦囊
+           <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="./K2-0608.html" target="_blank"> 保險</a>
+            <a href="https://www.immd.gov.hk/hkt/service/travel_document/visa_free_access.html" target="_blank">各地簽證須知 </a>
+            <a href="https://www.jnto.go.jp/"target="_blank"> 日本旅遊局</a>
+          </div>
+      </li>
+
+
+      <li><a href="Contactus.HTML" target="_blank" > 關於我們</a></li>
+      <li><a href="/Landing.html" target="_blank" >網上服務</a></li>
+      </ul>
+    </header>
+
+
+
+    <div >
+        <div class="text-center my-5">
+    <Section class="K3">精彩日本</Section> </div>
+   
+    <div class="text-center my-5"><img src="img1/Japan map2.png" alt="Japan map" ></div>
+     <br>
+  <h style="font-size: 3rem;"><本週推介><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">旅遊需知 </button></h>
+       
+      <br>
+
+    <div class= "container">
+ <!-- row start  -->
+<div class="row">
+<div class="col-lg-4 col-md-6 col-sm-12">
+<div class="card mb-5 shadow-sm">
+<img src="/img1/東京.jpeg" class="img-fluid"/>
+<div class="card-body">
+<div class="card-title">
+
+<h2> 東京</h2>
+</div>
+ <div class="card-text">
+<p>
+直航東京、暢遊山梨 、富士山、河口湖、長野、松本、
+親手摘山梨水蜜桃及任食放題、東京迪士尼樂園或東京迪士尼海洋、
+迪士尼OFFICIAL HOTEL:東京灣喜來登GRAND SHERATON酒店、
+兩晚八岳GRAND MERCURE溫泉酒店、OUTLET
+</p>
+<hr>
+<p> 出發日期：8月30、9月1-8、10-14、19-27、29、10月2-8、12-28日</p>
+<!-- button group  -->
+<div class="button-group">
+  <button class="attraction-button tour-plan" data-attraction="東京">行程規劃</button>
+  <button class="attraction-button price-list" data-attraction="東京">價格列表</button>
+  <button class="attraction-button share" data-attraction="東京">分享</button>
+  <button id="b1" class="attraction-button enquiry" data-attraction="東京">詢問</button>
+</div>
+
+
+ </div>
+ <!-- <a href="https://maps.app.goo.gl/CqVxAvZwQDM9krcP8"  Target="_blank" Class=" btn btn-outline-primary rounded-0 float-end"> Search location</a> -->
+</div>
+</div>
+</div>
+
+<div class="col-lg-4 col-md-6 col-sm-12">
+    <div class="card mb-5 shadow-sm">
+    <img src="/img1/立山黑部.jpeg" class="img-fluid"/>
+    <div class="card-body">
+    <div class="card-title">
+    
+      <h2> 立山黑部</h2>
+    </div>
+     <div class="card-text">
+    <p>
+      日本名古屋入境、東京返港、<楓、楓、楓>、一氣呵成 !
+      <br>立山黑部阿爾卑斯山大自然奇觀寶庫、
+      黑部大壩排水奇觀、日本淨土上高地、大正池、河童橋、
+      世界文化遺產白川鄉合掌村、<日本三大名園>金澤兼六園、
+      OUTLET購物、 開心之旅
+    </p>
+    <hr>
+    <p> 出發日期：9月12、16、20-23日</p>
+    <!-- button group  -->
+    <div class="button-group">
+      <button class="attraction-button tour-plan" data-attraction="東京">行程規劃</button>
+      <button class="attraction-button price-list" data-attraction="東京">價格列表</button>
+      <button class="attraction-button share" data-attraction="東京">分享</button>
+      <button id="b1" class="attraction-button enquiry" data-attraction="東京">詢問</button>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card mb-5 shadow-sm">
+        <img src="/img1/名古屋.jpeg"class="img-fluid"/>
+        <div class="card-body">
+        <div class="card-title">
+        
+     <h2> 名古屋</h2>
+    </div>
+     <div class="card-text">
+    <p>
+      大阪是一座充滿多元魅力的城市。從歷史古蹟、大型購物區、獨特美食街到港灣美景和現代藝術展覽，每個景點都獨具特色。
+
+      日本名古屋、三重伊勢、和歌山、大阪、京都、
+    <日本必到神宮>伊勢神宮、串本海中公園、
+    <日本三大瀑布>那智瀑布、強勢回歸清水寺、
+    嵐山渡月橋美景、大阪心齋橋
+
+        </p>
+    <hr>
+    <p> 出發日期：8月30-31、9月1-4、6-9、15、16、19日</p>
+    <!-- button group  -->
+    <div class="button-group">
+      <button class="attraction-button tour-plan" data-attraction="東京">行程規劃</button>
+      <button class="attraction-button price-list" data-attraction="東京">價格列表</button>
+      <button class="attraction-button share" data-attraction="東京">分享</button>
+      <button id="b1"class="attraction-button enquiry" data-attraction="東京">詢問</button>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card mb-5 shadow-sm">
+          <img src="/img1/大阪.jpeg" class="img-fluid"/>
+          <div class="card-body">
+          <div class="card-title">
+          
+            <h2> 大阪</h2>
+          </div>
+           <div class="card-text">
+          <p>
+            專機直航日本鳥取米子、大阪返港、一氣呵成! 暢遊鳥取 、岡山、姬路、大阪、
+            日本環球影城(包1DAY PASS)、岡山森林牧場公園、觀賞時令花卉及親親小動物、
+            800公尺177座銅像開心街、乘坐鬼太郎妖怪或柯南偵探漫畫特色列火車
+            <br>日本三大名城姬路城、大阪心齋橋、OUTLET購物
+            <br> <br>
+                    <hr>
+          <p> 出發日期：9月30、10月14、21日</p>
+          <!-- button group  -->
+          <div class="button-group">
+            <button class="attraction-button tour-plan" data-attraction="東京">行程規劃</button>
+            <button class="attraction-button price-list" data-attraction="東京">價格列表</button>
+            <button class="attraction-button share" data-attraction="東京">分享</button>
+            <button id="b1"class="attraction-button enquiry" data-attraction="東京">詢問</button>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+      
+      
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card mb-5 shadow-sm">
+            <img src="/img1/北海道.jpg" class="img-fluid"/>
+            <div class="card-body">
+            <div class="card-title">
+            
+              <h2> 北海道</h2>
+          </div>
+           <div class="card-text">
+          <p>
+            直航北海道 細味日本深度 12天追楓之旅
+            遊走二十個紅葉熱點
+            玩轉 札幌、登別、函館、東北、新潟、立山黑部阿爾卑斯山
+            名古屋返港一氣呵成，重本安排入住北湯澤森之空庭溫泉酒店、
+            立山森之風溫泉酒店、國際品牌：白馬Courtyard by Marriott 溫泉酒店
+            全程共8晚溫泉，機場稅、燃油附加費及導遊、司機服務費用 全免!
+                    <hr>
+          <p> 出發日期：8月20、23、25-29、31日</p>
+          <!-- button group  -->
+          <div class="button-group">
+            <button class="attraction-button tour-plan" data-attraction="東京">行程規劃</button>
+            <button class="attraction-button price-list" data-attraction="東京">價格列表</button>
+            <button class="attraction-button share" data-attraction="東京">分享</button>
+            <button id="b1"class="attraction-button enquiry" data-attraction="東京">詢問</button>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+        
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <div class="card mb-5 shadow-sm">
+              <img src="img1/沖繩.jpeg" class="img-fluid"/>
+              <div class="card-body">
+              <div class="card-title">
+              
+                <h2> 沖繩</h2>
+              </div>
+               <div class="card-text">
+              <p>
+                沖繩輕奢侈享受之旅
+                【2024年新開】「名護TWIN LINE YANBARU酒店 新棟GREEN WAVE」
+                精心安排特色美食:沖繩名物SOBA御膳、沖繩AGU豚SHABUSHABU、琉球傳統料理11品膳、法式料理5品膳
+                【特色行程】【沖繩最大型POWER SPOT】大石林山、【沖繩本島最北端】邊戶岬、
+                珊瑚染色體驗、萬座毛、輕奢侈享受之旅
+                        <hr>
+              <p> 出發日期：9月1、8、22、10月13、20日</p>
+              <!-- button group  -->
+              <div class="button-group">
+                <button type="button" class="attraction-button tour-plan" data-toggle="modal" data-target="#myModel" data-backdrop="true">行程規劃</button>
+                <button class="attraction-button price-list" data-attraction="東京">價格列表</button>
+                <button class="attraction-button share" data-attraction="東京">分享</button>
+                <button  class="attraction-button enquiry" data-attraction="東京">詢問</button>
+              </div>
+              </div>
+              </div>
+              </div>
+              </div>
+    
+  <!-- row end  --> 
+    </div>
+      </div>
+    </div>
+  </div>
+
+ 
+  <!-- Add top button -->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top </button>
+ 
+</div>
+</div>
+
+
+  
+<!-- try1 -->
+<script>
+  // document.getElementByid("attraction-button enquiry").addEventListener("click", function() {
+  //   alert("請致電:3692 0888 或 Whatsapp: 66880312");
+  // });
+  // </script>
+
+  <!-- try2 -->
+  <div class="container">
+    <h2>香港出發：共6團</h2>
+    <!-- Trigger the modal with a button -->
+    <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">旅遊需知 </button> -->
+  
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">旅遊警示</h4>
+          </div>
+          <div class="modal-body">
+            <p>港府更新保安局旅遊警示網，日本仍屬黃色預警級別。</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+
+
+
+
+<!-- top button scrip -->
+<script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
